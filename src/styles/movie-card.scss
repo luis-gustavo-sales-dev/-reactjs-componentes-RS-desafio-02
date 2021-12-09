@@ -1,9 +1,42 @@
 .movie-card {
   position: relative;
+  //border: 2px solid #fae800;
+  border-radius: 10px;
+  padding: 2px;
+
+  &:hover {
+    // filter: brightness(1.5);
+    cursor: pointer;
+    animation-name: stretch;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+
+    @keyframes stretch {
+      0% {
+        background-color: #1f2229;
+      }
+      50% {
+        background-color: #ffee00;
+      }
+      100% {
+        background-color: #ffee00;
+      }
+    }
+  }
 
   img {
     width: 14.31rem;
     height: 21.25rem;
+    border-radius: 10px;
+
+    &:hover {
+      display: none;
+    }
   }
 
   > div {
@@ -21,35 +54,35 @@
     .movie-info {
       max-width: 12.31rem;
       width: 100%;
-      
+
       display: flex;
       flex-direction: column;
-  
+
       > span {
         font-weight: 600;
         font-size: 1rem;
         color: #fbfbfb;
-  
+
         margin-top: auto;
         margin-bottom: 0.5rem;
       }
-  
+
       .meta {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-  
+
         margin-bottom: 1rem;
-  
+
         div {
           display: flex;
           align-items: center;
-  
+
           font-weight: 600;
           color: var(--gray);
-  
+
           svg {
-            color: #FAE800;
+            color: #fae800;
             margin-right: 0.5rem;
           }
         }
